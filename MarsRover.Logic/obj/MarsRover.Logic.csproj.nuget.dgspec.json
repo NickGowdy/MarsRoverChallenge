@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj": {}
+  },
+  "projects": {
+    "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj",
+        "projectName": "MarsRover.Domain",
+        "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj",
+        "packagesPath": "/Users/nickgowdy/.nuget/packages/",
+        "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/nickgowdy/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj",
+        "projectName": "MarsRover.Logic",
+        "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj",
+        "packagesPath": "/Users/nickgowdy/.nuget/packages/",
+        "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/nickgowdy/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj": {
+                "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
