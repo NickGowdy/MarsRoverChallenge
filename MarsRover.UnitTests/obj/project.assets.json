@@ -6356,11 +6356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.UnitTests/MarsRover.UnitTests.csproj",
+      "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.UnitTests/MarsRover.UnitTests.csproj",
       "projectName": "MarsRover.UnitTests",
-      "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.UnitTests/MarsRover.UnitTests.csproj",
+      "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.UnitTests/MarsRover.UnitTests.csproj",
       "packagesPath": "/Users/nickgowdy/.nuget/packages/",
-      "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.UnitTests/obj/",
+      "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.UnitTests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -6377,11 +6377,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj": {
-              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj"
+            "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Domain/MarsRover.Domain.csproj": {
+              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Domain/MarsRover.Domain.csproj"
             },
-            "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj": {
-              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj"
+            "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Logic/MarsRover.Logic.csproj": {
+              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Logic/MarsRover.Logic.csproj"
             }
           }
         }

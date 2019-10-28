@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj",
+      "projectUniqueName": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Logic/MarsRover.Logic.csproj",
       "projectName": "MarsRover.Logic",
-      "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/MarsRover.Logic.csproj",
+      "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Logic/MarsRover.Logic.csproj",
       "packagesPath": "/Users/nickgowdy/.nuget/packages/",
-      "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Logic/obj/",
+      "outputPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Logic/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -94,8 +94,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj": {
-              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRover/MarsRover.Domain/MarsRover.Domain.csproj"
+            "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Domain/MarsRover.Domain.csproj": {
+              "projectPath": "/Users/nickgowdy/Desktop/Nandos/MarsRoverChallenge/MarsRover.Domain/MarsRover.Domain.csproj"
             }
           }
         }
