@@ -39,12 +39,11 @@ namespace MarsRover.Logic.Services
             var yStartingPosition = parsedInstructionsTuple.parsedInstructions.StartingPosition.YStartingPosition;
             var facingDirection = parsedInstructionsTuple.parsedInstructions.StartingPosition.DirectionFacing;
 
-            var positions = CreateSurface(xLength, yLength);
-            var position = SetStartingPosition(positions, xStartingPosition, yStartingPosition, facingDirection);
+            var position = SetStartingPosition(xStartingPosition, yStartingPosition, facingDirection);
 
             foreach (var instruction in parsedInstructionsTuple.parsedInstructions.MovementInstructions)
             {
-                position = Move(instruction, positions, position);
+                position = Move(instruction, xLength, yLength, position);
             }
 
             return $"{position.XPosition} {position.YPosition} {position.FacingDirection}";
@@ -55,10 +54,9 @@ namespace MarsRover.Logic.Services
         /// Turn or move Mars Rover based on the current instruction
         /// </summary>
         /// <param name="instruction"></param>
-        /// <param name="positions"></param>
         /// <param name="currentPosition"></param>
         /// <returns></returns>
-        private Position Move(char instruction, IEnumerable<Position> positions, Position currentPosition)
+        private Position Move(char instruction, int xLength, int yLength, Position currentPosition)
         {
             if (instruction != 'M')
             {
@@ -81,44 +79,19 @@ namespace MarsRover.Logic.Services
             {
                 yPosition = currentPosition.FacingDirection == "S" ? currentPosition.YPosition - 1 : currentPosition.YPosition + 1;
             }
-
-            var newPosition = positions.FirstOrDefault(surface => surface.XPosition == xPosition && surface.YPosition == yPosition);
-            newPosition.FacingDirection = currentPosition.FacingDirection;
-            return newPosition;
+            return new Position { FacingDirection = currentPosition.FacingDirection, XPosition = xPosition, YPosition = yPosition };
         }
 
         /// <summary>
         /// Set starting position that Mars Rover will navigate from.
         /// </summary>
-        /// <param name="positions"></param>
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <param name="facingDirection"></param>
         /// <returns>Position object with x and y coordinates and is occupied flag.</returns>
-        private Position SetStartingPosition(IEnumerable<Position> positions, int x, int y, string facingDirection)
+        private Position SetStartingPosition(int x, int y, string facingDirection)
         {
-            var position = positions.FirstOrDefault(surface => surface.XPosition == x && surface.YPosition == y);
-            position.FacingDirection = facingDirection;
-            return position;
-        }
-
-        /// <summary>
-        /// Creates array of possible coordinates.
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns>IEnumerable of possible positions for the Mars Rover to navigate.</returns>
-        private static IEnumerable<Position> CreateSurface(int x, int y)
-        {
-            var positions = new List<Position>();
-            for (var i = 0; i <= x; i++)
-            {
-                for (var ii = 0; ii <= y; ii++)
-                {
-                    positions.Add(new Position { XPosition = i, YPosition = ii });
-                }
-            }
-            return positions;
+            return new Position { XPosition = x, YPosition = y, FacingDirection = facingDirection };
         }
 
         /// <summary>
