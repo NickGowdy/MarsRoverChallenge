@@ -7,9 +7,7 @@ namespace MarsRover.Logic.Services
 {
     public class NavigationService
     {
-        private readonly List<char> Directions = new List<char> { 'N', 'S', 'E', 'W' };
-
-        private List<(char FacingDirection, char Instruction, char NewDirection)> DirectionLookup
+        private readonly List<(char FacingDirection, char Instruction, char NewDirection)> DirectionLookup
             = new List<(char FacingDirection, char Instruction, char NewDirection)>
             {
                 ('N', 'L', 'W'),
