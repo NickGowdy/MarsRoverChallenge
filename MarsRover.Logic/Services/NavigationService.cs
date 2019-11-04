@@ -7,7 +7,7 @@ namespace MarsRover.Logic.Services
 {
     public class NavigationService
     {
-        private readonly List<(char FacingDirection, char Instruction, char NewDirection)> DirectionLookup
+        protected readonly IReadOnlyCollection<(char FacingDirection, char Instruction, char NewDirection)> DirectionLookup
             = new List<(char FacingDirection, char Instruction, char NewDirection)>
             {
                 ('N', 'L', 'W'),
@@ -17,8 +17,7 @@ namespace MarsRover.Logic.Services
                 ('N', 'R', 'E'),
                 ('E', 'R', 'S'),
                 ('S', 'R', 'W'),
-                ('W', 'R', 'N'),
-
+                ('W', 'R', 'N')
             };
 
         /// <summary>
@@ -26,7 +25,7 @@ namespace MarsRover.Logic.Services
         /// </summary>
         /// <param name="instructions"></param>
         /// <returns>String of the Mars Rovers final coordinates and the direction it's facing.</returns>
-        public string Navigate(IList<string> instructions)
+        public virtual string Navigate(IList<string> instructions)
         {
             var parsedInstructionsTuple = ValidateAndParseInsutrctions(instructions);
             if (!parsedInstructionsTuple.isValid) return string.Empty;
@@ -54,7 +53,7 @@ namespace MarsRover.Logic.Services
         /// <param name="instruction"></param>
         /// <param name="currentPosition"></param>
         /// <returns></returns>
-        private Position Move(char instruction, int xLength, int yLength, Position currentPosition)
+        protected virtual Position Move(char instruction, int xLength, int yLength, Position currentPosition)
         {
             if (instruction != 'M')
             {
@@ -62,6 +61,7 @@ namespace MarsRover.Logic.Services
                     .FirstOrDefault(lookup => lookup.FacingDirection == currentPosition.FacingDirection.ToCharArray().FirstOrDefault() && lookup.Instruction == instruction);
 
                 currentPosition.FacingDirection = lookupValue.NewDirection.ToString();
+
                 return currentPosition;
             }
 
@@ -87,7 +87,7 @@ namespace MarsRover.Logic.Services
         /// <param name="y"></param>
         /// <param name="facingDirection"></param>
         /// <returns>Position object with x and y coordinates and is occupied flag.</returns>
-        private Position SetStartingPosition(int x, int y, string facingDirection)
+        protected Position SetStartingPosition(int x, int y, string facingDirection)
         {
             return new Position { XPosition = x, YPosition = y, FacingDirection = facingDirection };
         }
@@ -97,7 +97,7 @@ namespace MarsRover.Logic.Services
         /// </summary>
         /// <param name="instructions"></param>
         /// <returns>Boolean based on validation of instructions and tuple of instructions for navigation.</returns>
-        private (bool isValid, ParsedInstructions parsedInstructions) ValidateAndParseInsutrctions(IList<string> instructions)
+        protected virtual (bool isValid, ParsedInstructions parsedInstructions) ValidateAndParseInsutrctions(IList<string> instructions)
         {
             if (!instructions.Any() || instructions.Count != 3)
                 return (isValid: false, parsedInstructions: null);
